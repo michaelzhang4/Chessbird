@@ -1,0 +1,87 @@
+{
+  "schema": "woodpecker-set@1",
+  "id": "sample-tactics",
+  "title": "Sample Tactics (demo)",
+  "description": "A few hand-verified mates to try the trainer. Paste a Lichess CSV in \"New Set\" to build a real ~300-puzzle set.",
+  "createdAt": "2026-06-26",
+  "source": "sample",
+  "puzzles": [
+    {
+      "id": "sample_01",
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR b KQkq - 3 3",
+      "moves": [
+        "g8f6",
+        "h5f7"
+      ],
+      "setupMoveFirst": true,
+      "solverColor": "w",
+      "rating": 1000,
+      "themes": [
+        "mateIn1",
+        "opening"
+      ],
+      "source": "sample"
+    },
+    {
+      "id": "sample_02",
+      "fen": "rnbqkbnr/pppp1ppp/8/4p3/8/5P2/PPPPP1PP/RNBQKBNR w KQkq - 0 2",
+      "moves": [
+        "g2g4",
+        "d8h4"
+      ],
+      "setupMoveFirst": true,
+      "solverColor": "b",
+      "rating": 800,
+      "themes": [
+        "mateIn1"
+      ],
+      "source": "sample"
+    },
+    {
+      "id": "sample_03",
+      "fen": "7k/4P3/6K1/8/8/8/8/8 w - - 0 1",
+      "moves": [
+        "e7e8q"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "rating": 1200,
+      "themes": [
+        "mateIn1",
+        "promotion",
+        "endgame"
+      ],
+      "source": "sample"
+    },
+    {
+      "id": "sample_04",
+      "fen": "6k1/5ppp/8/8/8/8/8/R6K w - - 0 1",
+      "moves": [
+        "a1a8"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "rating": 1100,
+      "themes": [
+        "mateIn1",
+        "backRank"
+      ],
+      "source": "sample"
+    },
+    {
+      "id": "sample_05",
+      "fen": "6rk/6pp/8/6N1/8/8/8/7K w - - 0 1",
+      "moves": [
+        "g5f7"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "rating": 1500,
+      "themes": [
+        "mateIn1",
+        "smotheredMate"
+      ],
+      "source": "sample"
+    }
+  ]
+}

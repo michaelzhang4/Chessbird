@@ -1,0 +1,81 @@
+/**
+ * chess.com-style GREEN board theme for chessground.
+ * Import order (in ChessBoard.svelte): chessground.base.css -> chessground.cburnett.css -> this file.
+ * This file fully replaces chessground's "brown" theme (we don't import brown).
+ *
+ * Board squares: light #EBECD0 / dark #779556 (chess.com green).
+ * The dark squares are painted by an embedded 8x8 SVG so the two colours are exact and crisp.
+ */
+cg-board {
+	background-color: #ebecd0;
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4IDgiIHNoYXBlLXJlbmRlcmluZz0iY3Jpc3BFZGdlcyI+PGcgaWQ9ImEiPjxnIGlkPSJiIj48ZyBpZD0iYyI+PGcgaWQ9ImQiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGlkPSJlIiBvcGFjaXR5PSIwIi8+PHVzZSB4PSIxIiB5PSIxIiBocmVmPSIjZSIvPjxyZWN0IHk9IjEiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGlkPSJmIiBmaWxsPSIjNzc5NTU2Ii8+PHVzZSB4PSIxIiB5PSItMSIgaHJlZj0iI2YiLz48L2c+PHVzZSB4PSIyIiBocmVmPSIjZCIvPjwvZz48dXNlIHg9IjQiIGhyZWY9IiNjIi8+PC9nPjx1c2UgeT0iMiIgaHJlZj0iI2IiLz48L2c+PHVzZSB5PSI0IiBocmVmPSIjYSIvPjwvc3ZnPg==');
+}
+
+/* Legal-move hints — subtle dark dots on empty squares, a ring on capturable squares (chess.com style). */
+cg-board square.move-dest {
+	background: radial-gradient(rgba(0, 0, 0, 0.16) 22%, rgba(0, 0, 0, 0) 23%);
+}
+cg-board square.oc.move-dest {
+	background: radial-gradient(transparent 0%, transparent 78%, rgba(0, 0, 0, 0.2) 79%);
+}
+cg-board square.move-dest:hover,
+cg-board square.move-dest.hover {
+	background: rgba(255, 255, 255, 0.25);
+}
+cg-board square.premove-dest {
+	background: radial-gradient(rgba(20, 30, 85, 0.4) 22%, rgba(0, 0, 0, 0) 23%);
+}
+
+/* Last move + selection — chess.com warm-yellow highlight. */
+cg-board square.last-move {
+	background-color: rgba(255, 241, 0, 0.42);
+}
+cg-board square.selected {
+	background-color: rgba(255, 241, 0, 0.55);
+}
+
+/* Check — red radial glow under the king. */
+cg-board square.check {
+	background: radial-gradient(
+		ellipse at center,
+		rgba(255, 0, 0, 0.95) 0%,
+		rgba(220, 0, 0, 0.85) 26%,
+		rgba(170, 0, 0, 0) 70%,
+		rgba(170, 0, 0, 0) 100%
+	);
+}
+
+/* Coordinate labels (when shown) alternate ink/cream to stay legible on both squares. */
+.orientation-white .ranks :nth-child(odd),
+.orientation-white .files :nth-child(even),
+.orientation-black .ranks :nth-child(even),
+.orientation-black .files :nth-child(odd) {
+	color: rgba(255, 255, 255, 0.85);
+}
+.orientation-white .ranks :nth-child(even),
+.orientation-white .files :nth-child(odd),
+.orientation-black .ranks :nth-child(odd),
+.orientation-black .files :nth-child(even) {
+	color: rgba(70, 90, 50, 0.9);
+}
+
+/* Promotion picker overlay (our own UI, see ChessBoard.svelte). */
+.cg-promo {
+	position: absolute;
+	inset: 0;
+	z-index: 30;
+	background: rgba(0, 0, 0, 0.5);
+}
+.cg-promo__piece {
+	position: absolute;
+	width: 12.5%;
+	aspect-ratio: 1;
+	background-color: #f8f8f8;
+	background-size: cover;
+	cursor: pointer;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+.cg-promo__piece:hover {
+	background-color: #ffffff;
+	filter: brightness(1.05);
+}

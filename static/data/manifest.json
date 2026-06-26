@@ -1,0 +1,15 @@
+{
+	"version": 1,
+	"sets": [
+		{
+			"id": "sample-tactics",
+			"title": "Sample Tactics (demo)",
+			"file": "sets/sample-tactics.json",
+			"count": 5,
+			"ratingRange": [800, 1500],
+			"themes": ["mateIn1", "promotion", "backRank"],
+			"source": "sample",
+			"description": "Five hand-verified mates to try the trainer end-to-end. Build a real ~300 set in New Set."
+		}
+	]
+}
