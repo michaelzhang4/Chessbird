@@ -15,12 +15,13 @@ import { dirname, join } from 'node:path';
 import { fetchStudyPgn, studyToPuzzles } from './lib/study.mjs';
 import { rebuildManifest } from './rebuild-manifest.mjs';
 
-const [studyId, setId, title, solverColor] = process.argv.slice(2);
+const [studyId, setId, title, solverColor, expandArg] = process.argv.slice(2);
 if (!studyId || !setId) {
-	console.error('Usage: node scripts/import-study.mjs <studyId> <setId> "<Title>" [w|b]');
+	console.error('Usage: node scripts/import-study.mjs <studyId> <setId> "<Title>" [w|b] [expand]');
 	process.exit(1);
 }
 const repertoire = solverColor === 'w' || solverColor === 'b';
+const expandVariations = expandArg === 'expand';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 let pgn;
@@ -33,7 +34,8 @@ try {
 
 const { studyName, puzzles, skipped } = studyToPuzzles(pgn, setId, {
 	forceSolver: repertoire ? solverColor : undefined,
-	defaultStartFen: repertoire
+	defaultStartFen: repertoire,
+	expandVariations
 });
 
 const setFile = {

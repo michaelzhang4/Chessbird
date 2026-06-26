@@ -2,10 +2,43 @@
   "version": 1,
   "sets": [
     {
+      "id": "dragon-complex-tactics",
+      "title": "Dragon Complex - Tactics",
+      "file": "sets/dragon-complex-tactics.json",
+      "count": 800,
+      "source": "lichess",
+      "ratingRange": [
+        400,
+        2560
+      ],
+      "themes": [
+        "middlegame",
+        "mate",
+        "mateIn1"
+      ],
+      "description": "Lichess puzzles tagged Dragon|Yugoslav (800 of 12426 found)."
+    },
+    {
+      "id": "dragon-yugoslav-attack",
+      "title": "Dragon/Yugoslav Attack (Black)",
+      "file": "sets/dragon-yugoslav-attack.json",
+      "count": 62,
+      "source": "lichess-repertoire",
+      "description": "Dragon Yugoslav — drilling Black. From Lichess study https://lichess.org/study/UEAlHDey"
+    },
+    {
+      "id": "dragon-yugoslav-accelerated",
+      "title": "Dragon/Yugoslav: Accelerated (Black)",
+      "file": "sets/dragon-yugoslav-accelerated.json",
+      "count": 241,
+      "source": "lichess-repertoire",
+      "description": "Yugoslav Accelerated Dragon — drilling Black. From Lichess study https://lichess.org/study/0SYyUJIx"
+    },
+    {
       "id": "had-repertoire-1",
       "title": "H-Dragon Repertoire (Black)",
       "file": "sets/had-repertoire-1.json",
-      "count": 41,
+      "count": 130,
       "source": "lichess-repertoire",
       "description": "Hyper-Accelerated Dragon Repertoire — drilling Black. From Lichess study https://lichess.org/study/VV8eF6Ge"
     },
@@ -13,7 +46,7 @@
       "id": "had-repertoire-2",
       "title": "H-Dragon: Anti-systems and Maroczy (Black)",
       "file": "sets/had-repertoire-2.json",
-      "count": 6,
+      "count": 140,
       "source": "lichess-repertoire",
       "description": "Hyperaccelerated Dragon — drilling Black. From Lichess study https://lichess.org/study/sD7T4Seb"
     },
