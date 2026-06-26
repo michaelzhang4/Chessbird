@@ -1,0 +1,722 @@
+{
+  "schema": "woodpecker-set@1",
+  "id": "the-woodpecker-method-2-part-2",
+  "title": "The Woodpecker Method 2 (Part 2)",
+  "description": "Imported from Lichess study https://lichess.org/study/8hXVlrre",
+  "createdAt": "2026-06-26",
+  "source": "lichess-study",
+  "puzzles": [
+    {
+      "id": "the-woodpecker-method-2-part-2_001",
+      "fen": "r3k2r/1pqbbpp1/p1npp2p/8/4PP1P/1NN4R/PPP2QP1/2KR1B2 b kq - 0 1",
+      "moves": [
+        "b7b5",
+        "g2g4",
+        "b5b4",
+        "c3e2",
+        "a6a5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/vUDExCdA"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_002",
+      "fen": "2rq1rk1/pp1bppb1/3p2p1/4n2n/3NP2P/2N1BP2/PPPQ4/1K1R1BR1 b - - 0 1",
+      "moves": [
+        "c8c3",
+        "b2c3",
+        "d8c7",
+        "e3h6",
+        "g7h6",
+        "d2h6",
+        "c7b6",
+        "b1a1",
+        "b6a5",
+        "h6h5",
+        "d7e6",
+        "d4b3",
+        "a5c3",
+        "a1b1",
+        "f8c8",
+        "g1g2",
+        "a7a5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/vKTre1ji"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_003",
+      "fen": "rn1q1rk1/pbp1bppp/1p3n2/3p4/3P4/P1N1P1N1/1P2BPPP/R1BQK2R w KQ - 0 1",
+      "moves": [
+        "g3f5",
+        "f8e8",
+        "f5e7"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/6wE9da1M"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_004",
+      "fen": "r1b2rk1/ppq2ppp/2n1pn2/2p5/3P4/P1PBPN2/5PPP/R1BQ1RK1 b - - 0 1",
+      "moves": [
+        "e6e5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/OoNZe2XV"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_005",
+      "fen": "rnb2rk1/ppp1qppp/8/3p4/3P4/3BP3/PP3PPP/R2QK1NR b KQ - 0 1",
+      "moves": [
+        "c7c5",
+        "g1e2",
+        "b8c6",
+        "d4c5",
+        "d5d4",
+        "e3d4",
+        "c6d4"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/Vqhs8e94"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_006",
+      "fen": "r3r1k1/2qbbppp/pn1p1n2/1pp1p3/3PP3/1PP2N1P/P1B1QPP1/R1B1RNK1 w - - 0 1",
+      "moves": [
+        "d4e5",
+        "d6e5",
+        "c3c4",
+        "d7c6",
+        "c1b2",
+        "e7f8",
+        "f3d2"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/4eSNXvEu"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_007",
+      "fen": "3rr1k1/2qb1pbp/p2p1np1/np2p3/3PP3/1P2NQ1P/PBBN1PP1/R3R1K1 b - - 0 1",
+      "moves": [
+        "a5c6",
+        "d4d5",
+        "c6d4",
+        "f3d1",
+        "d4c2"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/wNXZV6c6"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_008",
+      "fen": "r4rk1/pp2bppp/1q2p1b1/4B3/2BP4/1P6/P3QPPP/3RR1K1 w - - 0 1",
+      "moves": [
+        "d4d5",
+        "e6d5",
+        "d1d5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/BnObt6l7"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_009",
+      "fen": "r1b1rnk1/1pp1qppp/p1p5/4P3/3N4/P1Q3B1/1PP2PPP/3R1RK1 b - - 0 1",
+      "moves": [
+        "c6c5",
+        "d4f3",
+        "b7b6"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/cGmfm90Y"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_010",
+      "fen": "2rr2k1/pn2qp1p/4b1p1/2pp4/8/6P1/PPNQPPBP/2RR2K1 w - - 0 1",
+      "moves": [
+        "b2b4",
+        "h7h5",
+        "h2h4",
+        "b7d6",
+        "b4c5",
+        "c8c5",
+        "c2d4"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/JuFXUz7K"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_011",
+      "fen": "rnbqkbnr/pp4pp/2p1p3/3p1p2/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 1",
+      "moves": [
+        "c1f4"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/wRtc6gN7"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_012",
+      "fen": "2r2rk1/p2qn1pp/1p2p3/n2pPp1P/3P1N2/P2PB1Q1/5PP1/R3K2R w KQ - 0 1",
+      "moves": [
+        "h5h6",
+        "g7g6",
+        "e1g1"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/niC43PxR"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_013",
+      "fen": "r1b1qrk1/2p3bp/p2p1n2/3Ppp1n/2B5/2N1BP1P/PPQ1N1P1/2K1R2R b - - 0 1",
+      "moves": [
+        "f5f4"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/54MaSavO"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_014",
+      "fen": "r3qrk1/2nn1pbp/p2p2p1/1ppPp1B1/2P1PP2/1PNQ4/P2N2PP/4RRK1 w - - 0 1",
+      "moves": [
+        "f4f5",
+        "f7f6",
+        "g5e3",
+        "b5b4",
+        "c3a4"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/oa00qYjj"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_015",
+      "fen": "rnbq1rk1/1p3pbp/p2p1np1/2pP4/P3P3/2NB1N2/1P3PPP/R1BQ1RK1 b - - 0 1",
+      "moves": [
+        "c8g4",
+        "h2h3",
+        "g4f3",
+        "d1f3",
+        "b8d7",
+        "c1f4",
+        "d8e7",
+        "f3e2",
+        "f8e8",
+        "f4h2",
+        "a8c8"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/GedQulr4"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_016",
+      "fen": "r1bqnrk1/pp1n2bp/2pp2p1/4pp2/2PPP3/2N1BN2/PP3PPP/R2QRBK1 w - - 0 1",
+      "moves": [
+        "e4f5",
+        "g6f5",
+        "d4e5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/bpYXouzm"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_017",
+      "fen": "r3r1k1/1pqn1pb1/p2p1npp/2pP4/P3PB2/2N2B1P/1PQ2PP1/R3R1K1 b - - 0 1",
+      "moves": [
+        "c5c4",
+        "f3e2",
+        "a8c8"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/MvTUkBaD"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_018",
+      "fen": "r2qr1k1/ppn2pb1/3p1n1p/2pP2p1/4P1b1/P1N2NB1/1PQ1BPPP/R2R2K1 b - - 0 1",
+      "moves": [
+        "f6h5",
+        "f3d2",
+        "g4e2",
+        "c3e2",
+        "c7b5",
+        "d2b3"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/cl7klxaI"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_019",
+      "fen": "r1bq1rk1/pppnn1bp/3p2p1/3Ppp2/1PP1P3/2N2NP1/P4PBP/R1BQ1RK1 w - - 0 1",
+      "moves": [
+        "f3g5",
+        "d7f6",
+        "a2a4",
+        "a7a5",
+        "b4b5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/w6ue0UM9"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_020",
+      "fen": "r1b2rk1/pp2qpbp/2p3p1/2n1p2n/2P1P3/2N1BP2/PP1QN1PP/1B1R1RK1 b - - 0 1",
+      "moves": [
+        "c5e6",
+        "g2g3"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/UhXIj7YN"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_021",
+      "fen": "r4rk1/pppqppbp/1n4p1/3P4/4P3/1QN1BP2/PP3P1P/2KR3R w - - 0 1",
+      "moves": [
+        "h2h4"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/E02ZA5bd"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_022",
+      "fen": "r1bqn1k1/ppp2rb1/3p2np/PPPPp1p1/2N1Pp2/B1N2P2/4B1PP/R2Q1RK1 w - - 0 1",
+      "moves": [
+        "b5b6",
+        "a7b6",
+        "a5b6",
+        "c7b6",
+        "c4b6",
+        "a8b8",
+        "c3b5",
+        "g7f8",
+        "b5a7"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/gAIWvl5D"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_023",
+      "fen": "r1bqk2r/pp2bppp/2n1pn2/3p4/2PP4/P1N2N2/1P3PPP/R1BQKB1R w KQkq - 0 1",
+      "moves": [
+        "c4c5",
+        "b7b6",
+        "f1b5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/XFZDCtxp"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_024",
+      "fen": "r1bqk2r/pp2ppbp/1nnp2p1/6B1/2PP4/2N5/PP3PPP/2RQKBNR w Kkq - 0 1",
+      "moves": [
+        "d4d5",
+        "c6e5",
+        "f1e2",
+        "e8g8",
+        "b2b3"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/S9C1Z0J6"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_025",
+      "fen": "r2q1r2/pp2ppkp/3p2p1/3b1P2/2P1P3/3Q4/PP4PP/2R2RK1 w - - 0 1",
+      "moves": [
+        "e4d5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/HeFxvAqq"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_026",
+      "fen": "r2q1r2/1ppb1pbk/p1np1npp/4p3/1P2P3/1BPP1N2/PB1N1PPP/R2QR1K1 b - - 0 1",
+      "moves": [
+        "f6h5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/k8Gcp47F"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_027",
+      "fen": "r2qr1k1/ppn1ppbp/2bp2p1/3N4/2P1PP2/4B3/PP1QB1PP/3R1RK1 w - - 0 1",
+      "moves": [
+        "f4f5",
+        "c7d5",
+        "e4d5",
+        "c6d7",
+        "e2d3"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/LUQlc7kk"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_028",
+      "fen": "r1bqk2r/pp1pppbp/2n2np1/8/2PP4/2N2N2/PP3PPP/R1BQKB1R w KQkq - 0 1",
+      "moves": [
+        "d4d5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/0GpNtofo"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_029",
+      "fen": "r4rk1/2qnbpp1/ppbp1n1p/4pP2/P3P1PP/1NN1B3/1PP3B1/R2Q1RK1 b - - 0 1",
+      "moves": [
+        "f6h7",
+        "e3f2",
+        "f8c8"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/yZPImlJp"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_030",
+      "fen": "r2nk1nr/pppq1pbp/3pb1p1/1P2p3/2P5/2NP1NP1/P3PPBP/R1BQK2R w KQkq - 0 1",
+      "moves": [
+        "f3g5",
+        "e6f5",
+        "e2e4"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/KWO5oEik"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_031",
+      "fen": "r1b2rk1/pp1n1pbp/3p1np1/q2Pp3/4P3/2N2NPP/PP3PB1/R1BQ1RK1 b - - 0 1",
+      "moves": [
+        "b7b5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/qxBtKJ1q"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_032",
+      "fen": "3rr1k1/pp3pp1/2n1qn1p/3p4/8/1QN1P1P1/PP3PBP/2R2RK1 b - - 0 1",
+      "moves": [
+        "d5d4",
+        "b3e6",
+        "e8e6",
+        "e3d4",
+        "d8d4"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/g6hp4pbp"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_033",
+      "fen": "rnbq1rk1/ppp1ppbp/6p1/8/3P4/2n2N2/PP1BPPPP/2RQKB1R w K - 0 1",
+      "moves": [
+        "d2c3",
+        "c7c5",
+        "d4c5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/wFXWlcQi"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_034",
+      "fen": "2r2rk1/p4ppp/1p6/n2P4/5Q2/5N2/q4PPP/3RR1K1 w - - 0 1",
+      "moves": [
+        "d5d6"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/LtuVrSyu"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_035",
+      "fen": "1r1q1rk1/p3ppbp/2bp1np1/2p5/1nP5/1PN1N1PP/PB1QPPB1/R4RK1 w - - 0 1",
+      "moves": [
+        "c3d5",
+        "b4d5",
+        "c4d5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/57Q40x3G"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_036",
+      "fen": "1r1q1rk1/p3ppbp/2bp1np1/2p5/1nP5/1PN1N1PP/PB1QPPB1/R4RK1 w - - 0 1",
+      "moves": [
+        "c3d5",
+        "b4d5",
+        "c4d5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/C5b0vdCw"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_037",
+      "fen": "r2q1rk1/pp1nppbp/2p1b1p1/4N1B1/3P4/2PB3P/PP3PP1/R2QR1K1 w - - 0 1",
+      "moves": [
+        "e5f3"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/nK29JUSs"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_038",
+      "fen": "r3nr1k/pb1nqppp/1pp5/3p4/3P4/1QNBPN2/PP3PPP/2RR2K1 w - - 0 1",
+      "moves": [
+        "e3e4",
+        "d5e4",
+        "c3e4",
+        "h7h6",
+        "d1e1"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/MYxQhWQu"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_039",
+      "fen": "1rr3k1/1p1np2p/p2pb3/5p2/2P5/1PR1BP2/P3B1PP/3RK3 b - - 0 1",
+      "moves": [
+        "b7b5",
+        "d1c1",
+        "d7f6"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/0mzQgZnQ"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_040",
+      "fen": "r1bq1rk1/p5p1/1p3npp/2pPp3/P1P1P3/2PBB3/6PP/R2Q1RK1 b - - 0 1",
+      "moves": [
+        "a7a5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/r42FL6zT"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_041",
+      "fen": "rnbqk2r/pp2ppbp/3p1np1/2P5/4PP2/2N2N2/PPP3PP/R1BQKB1R b KQkq - 0 1",
+      "moves": [
+        "d8a5",
+        "f1d3",
+        "a5c5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/hY8WGmR7"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_042",
+      "fen": "rnbqkb1r/pp1ppp1p/5np1/2p5/2P5/1P6/PB1PPPPP/RN1QKBNR w KQkq - 0 1",
+      "moves": [
+        "b2f6",
+        "e7f6",
+        "b1c3",
+        "f8g7",
+        "g2g3"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/BcgNNoMw"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_043",
+      "fen": "r3r1k1/pp1nppbp/2p5/5bp1/2NP4/BPP1P3/4BPPP/R4RK1 w - - 0 1",
+      "moves": [
+        "c4a5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/CUEV8lup"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_044",
+      "fen": "r1bqk1nr/1p3pbp/2np2p1/p1p1p3/2P5/P1N2NP1/1P1PPPBP/1RBQ1RK1 b kq - 0 1",
+      "moves": [
+        "g8e7",
+        "d2d3",
+        "e8g8",
+        "f3e1",
+        "c8e6",
+        "e1c2",
+        "d6d5",
+        "c4d5",
+        "e7d5",
+        "c3d5",
+        "e6d5",
+        "b2b4",
+        "d5g2",
+        "g1g2",
+        "b7b5",
+        "b4a5",
+        "c6a5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/4crZ3Gp0"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_045",
+      "fen": "r2qkb1r/ppp3pp/2b1pp1n/3pP3/3P4/1N3N2/PPP2PPP/R1BQK2R b KQkq - 0 1",
+      "moves": [
+        "h6f7"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/00GLLFHH"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_046",
+      "fen": "r2q1rk1/pbp2pbp/1p2p1pB/n7/3PP3/2PB4/P2QNPPP/R4RK1 b - - 0 1",
+      "moves": [
+        "c7c5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/WfpSu7ai"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_047",
+      "fen": "rn1qk1nr/1b2ppbp/p2p2p1/1pp5/3PPP2/2NB1N2/PPP1Q1PP/R1B1K2R w KQkq - 0 1",
+      "moves": [
+        "d4c5",
+        "d6c5",
+        "e4e5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/Xod0VeMJ"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_048",
+      "fen": "r2q1rk1/1p1bbppp/2nppn2/p7/4PP2/1NN1B3/PPP1B1PP/R2Q1RK1 w - - 0 1",
+      "moves": [
+        "a2a4",
+        "c6b4",
+        "e2f3",
+        "d7c6",
+        "b3d4",
+        "g7g6",
+        "f1f2",
+        "e6e5",
+        "d4c6",
+        "b7c6",
+        "f4e5",
+        "d6e5",
+        "d1f1"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/6OWu7H6H"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_049",
+      "fen": "r1b1rnk1/pp2q1pp/2p5/5p2/3Pp3/2N1P3/PPQN1PPP/4RRK1 w - - 0 1",
+      "moves": [
+        "f2f3",
+        "e4f3",
+        "d2f3",
+        "c8e6",
+        "e3e4",
+        "f5e4",
+        "e1e4"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/aU8JlCQo"
+    },
+    {
+      "id": "the-woodpecker-method-2-part-2_050",
+      "fen": "r2q1rk1/pb2bppp/1p3n2/2ppN3/3P4/6P1/PPQ1PPBP/R1BR2K1 w - - 0 1",
+      "moves": [
+        "d4c5",
+        "e7c5",
+        "e5d3",
+        "c5d6",
+        "d3f4"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "source": "lichess-study",
+      "sourceUrl": "https://lichess.org/study/8hXVlrre/RILAcwpx"
+    }
+  ]
+}

@@ -1,13 +1,18 @@
 {
   "totals": {
-    "studies": 29,
-    "failedStudies": 0,
-    "rawPuzzles": 1374,
-    "uniquePuzzles": 1207,
-    "exactDuplicatePuzzles": 167,
-    "samePositionDifferentSolution": 105
+    "studies": 33,
+    "failedStudies": 1,
+    "rawPuzzles": 1570,
+    "uniquePuzzles": 1402,
+    "exactDuplicatePuzzles": 168,
+    "samePositionDifferentSolution": 106
   },
-  "failures": [],
+  "failures": [
+    {
+      "studyId": "06keRpPv",
+      "error": "403 Forbidden"
+    }
+  ],
   "crossStudyOverlap": {
     "woodpecker-method-easy-51-100 ∩ woodpecker-method-tactic-part-2": 24,
     "the-woodpecker-method-part-4 ∩ woodpecker-method-tactic-part-3": 24,
@@ -351,6 +356,54 @@
       "singleMove": 4,
       "avgPlies": 4.7,
       "maxPlies": 15
+    },
+    {
+      "setId": "the-woodpecker-method-part-19",
+      "title": "The Woodpecker Method (Part 19)",
+      "studyId": "MC5fBpLs",
+      "puzzles": 49,
+      "skipped": 1,
+      "skipReasons": {
+        "no-moves": 1
+      },
+      "singleMove": 7,
+      "avgPlies": 5.6,
+      "maxPlies": 21
+    },
+    {
+      "setId": "the-woodpecker-method-2-part-1",
+      "title": "The Woodpecker Method 2 (Part 1)",
+      "studyId": "7lgJQReM",
+      "puzzles": 50,
+      "skipped": 0,
+      "skipReasons": {},
+      "singleMove": 17,
+      "avgPlies": 3.8,
+      "maxPlies": 15
+    },
+    {
+      "setId": "the-woodpecker-method-2-part-2",
+      "title": "The Woodpecker Method 2 (Part 2)",
+      "studyId": "8hXVlrre",
+      "puzzles": 50,
+      "skipped": 0,
+      "skipReasons": {},
+      "singleMove": 14,
+      "avgPlies": 4.2,
+      "maxPlies": 17
+    },
+    {
+      "setId": "the-woodpecker-method-2-part-3",
+      "title": "The Woodpecker Method 2 (Part 3)",
+      "studyId": "XLFFwfXM",
+      "puzzles": 47,
+      "skipped": 1,
+      "skipReasons": {
+        "no-moves": 1
+      },
+      "singleMove": 15,
+      "avgPlies": 4.6,
+      "maxPlies": 13
     }
   ]
 }
