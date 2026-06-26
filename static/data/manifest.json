@@ -2,6 +2,14 @@
 	"version": 1,
 	"sets": [
 		{
+			"id": "woodpecker-1-25",
+			"title": "Woodpecker 1-25: Easy Exercises",
+			"file": "sets/woodpecker-1-25.json",
+			"count": 25,
+			"source": "lichess-study",
+			"description": "Imported from the Lichess study \"The Woodpecker Method 1-25: Easy Exercises\"."
+		},
+		{
 			"id": "sample-tactics",
 			"title": "Sample Tactics (demo)",
 			"file": "sets/sample-tactics.json",
