@@ -12,6 +12,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { readFile } from 'node:fs/promises';
 import { fetchStudyPgn, studyToPuzzles, slug, puzKey, posKey } from './lib/study.mjs';
+import { rebuildManifest } from './rebuild-manifest.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ids = JSON.parse(await readFile(join(root, 'scripts', 'studies.json'), 'utf8'));
@@ -78,44 +79,20 @@ for (const s of sets) {
 	);
 }
 
-// ---- remove stale set files no longer produced (keep the demo) ----
+// ---- remove stale Woodpecker set files no longer produced (leave other content alone) ----
 const setsDir = join(root, 'static', 'data', 'sets');
-const keep = new Set([...sets.map((s) => `${s.setId}.json`), 'sample-tactics.json']);
+const keep = new Set(sets.map((s) => `${s.setId}.json`));
 for (const f of readdirSync(setsDir)) {
-	if (f.endsWith('.json') && !keep.has(f)) {
+	// only ever clean up files this batch owns (Woodpecker study slugs)
+	const owned = /^(the-woodpecker-method|woodpecker-method)/.test(f);
+	if (f.endsWith('.json') && owned && !keep.has(f)) {
 		unlinkSync(join(setsDir, f));
 		console.log(`removed orphan ${f}`);
 	}
 }
 
-// ---- manifest (study sets + keep the demo) ----
-const manifest = {
-	version: 1,
-	sets: [
-		...sets.map((s) => ({
-			id: s.setId,
-			title: s.title,
-			file: `sets/${s.setId}.json`,
-			count: s.puzzles.length,
-			source: 'lichess-study',
-			description: `From Lichess study ${s.studyId} (${s.puzzles.length} puzzles).`
-		})),
-		{
-			id: 'sample-tactics',
-			title: 'Sample Tactics (demo)',
-			file: 'sets/sample-tactics.json',
-			count: 5,
-			ratingRange: [800, 1500],
-			themes: ['mateIn1', 'promotion', 'backRank'],
-			source: 'sample',
-			description: 'Five hand-verified mates to try the trainer end-to-end.'
-		}
-	]
-};
-writeFileSync(
-	join(root, 'static', 'data', 'manifest.json'),
-	JSON.stringify(manifest, null, 2) + '\n'
-);
+// ---- manifest: rebuilt from whatever set files now exist on disk ----
+rebuildManifest(root);
 
 // ---- analysis ----
 const allPuzzles = sets.flatMap((s) => s.puzzles.map((p) => ({ ...p, setId: s.setId })));

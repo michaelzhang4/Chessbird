@@ -8,6 +8,9 @@ node_modules
 /.svelte-kit
 /build
 
+# Verify artifacts
+verify-shots/
+
 # OS
 .DS_Store
 Thumbs.db

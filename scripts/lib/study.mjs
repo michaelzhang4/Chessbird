@@ -6,6 +6,7 @@
 import { Chess } from 'chess.js';
 
 export const STUDY_PGN = (id) => `https://lichess.org/study/${id}.pgn`;
+export const START_FEN = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
 
 export function slug(s) {
 	return (s || '')
@@ -68,9 +69,18 @@ function mainlineSans(block) {
 
 /**
  * Convert one study PGN into puzzles for a given setId.
+ *
+ * opts:
+ *  - forceSolver 'w'|'b' : the side the user drills. When the chapter's side-to-move
+ *    isn't this side, the opening move(s) auto-play (setupMoveFirst). Used for opening
+ *    repertoire studies. Default: solver = side to move, nothing auto-played (tactics).
+ *  - defaultStartFen     : chapters with no SetUp FEN start from the initial position
+ *    (opening studies begin at move 1). Default: such chapters are skipped.
+ *
  * Returns { studyName, puzzles, skipped[] }.
  */
-export function studyToPuzzles(pgn, setId) {
+export function studyToPuzzles(pgn, setId, opts = {}) {
+	const { forceSolver, defaultStartFen = false } = opts;
 	const blocks = splitChapters(pgn);
 	const puzzles = [];
 	const skipped = [];
@@ -79,7 +89,7 @@ export function studyToPuzzles(pgn, setId) {
 	blocks.forEach((block, i) => {
 		const n = i + 1;
 		studyName = studyName || tag(block, 'StudyName');
-		const fen = tag(block, 'FEN');
+		const fen = tag(block, 'FEN') || (defaultStartFen ? START_FEN : undefined);
 		const chapterUrl = tag(block, 'ChapterURL');
 		const chapterName = tag(block, 'ChapterName');
 		if (!fen) {
@@ -102,12 +112,20 @@ export function studyToPuzzles(pgn, setId) {
 			skipped.push({ n, name: chapterName, reason: `illegal:${e?.message ?? e}` });
 			return;
 		}
+		const fenSide = fen.split(/\s+/)[1] === 'b' ? 'b' : 'w';
+		const solverColor = forceSolver || fenSide;
+		const setupMoveFirst = forceSolver ? fenSide !== forceSolver : false;
+		// A drill needs at least one move for the solver to make.
+		if (setupMoveFirst && moves.length < 2) {
+			skipped.push({ n, name: chapterName, reason: 'no-solver-move' });
+			return;
+		}
 		puzzles.push({
 			id: `${setId}_${String(n).padStart(3, '0')}`,
 			fen,
 			moves,
-			setupMoveFirst: false,
-			solverColor: fen.split(/\s+/)[1] === 'b' ? 'b' : 'w',
+			setupMoveFirst,
+			solverColor,
 			source: 'lichess-study',
 			...(chapterUrl ? { sourceUrl: chapterUrl } : {})
 		});
