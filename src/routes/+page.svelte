@@ -131,16 +131,22 @@
 		</a>
 	{/if}
 
-	<a
-		href="{base}/pool"
-		class="mt-5 flex items-center justify-between rounded-2xl border border-brand-200 bg-brand-50 p-4 shadow-sm active:scale-[.99]"
-	>
-		<div class="min-w-0">
-			<p class="font-semibold text-brand-800">🎯 Build a training pool</p>
-			<p class="mt-0.5 text-sm text-brand-700/80">Mix sets &amp; pick how many random puzzles</p>
-		</div>
-		<span class="shrink-0 text-brand-700">→</span>
-	</a>
+	<div class="mt-5 grid grid-cols-2 gap-3">
+		<a
+			href="{base}/pool"
+			class="flex flex-col justify-between rounded-2xl border border-brand-200 bg-brand-50 p-4 shadow-sm active:scale-[.99]"
+		>
+			<p class="font-semibold text-brand-800">🎯 Training pool</p>
+			<p class="mt-0.5 text-xs text-brand-700/80">Mix sets, pick how many, run a program</p>
+		</a>
+		<a
+			href="{base}/practice"
+			class="flex flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm active:scale-[.99]"
+		>
+			<p class="font-semibold text-ink">🎲 Practice</p>
+			<p class="mt-0.5 text-xs text-neutral-500">Casual solving — no schedule</p>
+		</a>
+	</div>
 
 	<section class="mt-6">
 		<h2 class="mb-2 px-1 text-sm font-bold uppercase tracking-wide text-neutral-500">Library</h2>
