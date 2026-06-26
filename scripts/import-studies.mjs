@@ -7,7 +7,7 @@
  * Writes static/data/sets/<slug>.json per study, rewrites static/data/manifest.json,
  * and prints a consistency/quality report (also saved to scripts/study-report.json).
  */
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, readdirSync, unlinkSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { readFile } from 'node:fs/promises';
@@ -17,6 +17,14 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ids = JSON.parse(await readFile(join(root, 'scripts', 'studies.json'), 'utf8'));
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/** Tidy a study's name into a clean library title (drop trailing shout-outs, fix casing). */
+function cleanTitle(name) {
+	let t = (name || '').trim();
+	const part = t.match(/^(.*\(Part\s*\d+\))/i); // keep "...(Part N)", drop anything after
+	if (part) t = part[1];
+	return t.replace(/woodpecker/gi, 'Woodpecker').replace(/\s+/g, ' ').trim();
+}
 
 const sets = []; // { studyId, setId, title, puzzles, skipped, studyName }
 const failures = [];
@@ -35,7 +43,7 @@ for (const studyId of ids) {
 		continue;
 	}
 	const { studyName, puzzles, skipped } = studyToPuzzles(pgn, 'tmp');
-	const name = studyName || `study-${studyId}`;
+	const name = cleanTitle(studyName || `study-${studyId}`);
 
 	let setId = slug(name);
 	if (usedIds.has(setId)) setId = `${setId}-${studyId.slice(0, 4).toLowerCase()}`;
@@ -68,6 +76,16 @@ for (const s of sets) {
 		join(root, 'static', 'data', 'sets', `${s.setId}.json`),
 		JSON.stringify(setFile, null, 2) + '\n'
 	);
+}
+
+// ---- remove stale set files no longer produced (keep the demo) ----
+const setsDir = join(root, 'static', 'data', 'sets');
+const keep = new Set([...sets.map((s) => `${s.setId}.json`), 'sample-tactics.json']);
+for (const f of readdirSync(setsDir)) {
+	if (f.endsWith('.json') && !keep.has(f)) {
+		unlinkSync(join(setsDir, f));
+		console.log(`removed orphan ${f}`);
+	}
 }
 
 // ---- manifest (study sets + keep the demo) ----

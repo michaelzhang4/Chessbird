@@ -1,26 +1,13 @@
 {
   "totals": {
     "studies": 29,
-    "failedStudies": 3,
+    "failedStudies": 0,
     "rawPuzzles": 1374,
     "uniquePuzzles": 1207,
     "exactDuplicatePuzzles": 167,
     "samePositionDifferentSolution": 105
   },
-  "failures": [
-    {
-      "studyId": "KxpQnika",
-      "error": "403 Forbidden"
-    },
-    {
-      "studyId": "D2bCZhgA",
-      "error": "403 Forbidden"
-    },
-    {
-      "studyId": "0Oxs37el",
-      "error": "403 Forbidden"
-    }
-  ],
+  "failures": [],
   "crossStudyOverlap": {
     "woodpecker-method-easy-51-100 ∩ woodpecker-method-tactic-part-2": 24,
     "the-woodpecker-method-part-4 ∩ woodpecker-method-tactic-part-3": 24,
@@ -40,7 +27,7 @@
   "perStudy": [
     {
       "setId": "the-woodpecker-method-1-25",
-      "title": "The woodpecker Method 1-25",
+      "title": "The Woodpecker Method 1-25",
       "studyId": "fmCGaziQ",
       "puzzles": 25,
       "skipped": 0,
@@ -274,8 +261,8 @@
       "maxPlies": 17
     },
     {
-      "setId": "the-woodpecker-method-part-14-my-100th-study",
-      "title": "The Woodpecker Method (Part 14) MY 100TH STUDY!!",
+      "setId": "the-woodpecker-method-part-14",
+      "title": "The Woodpecker Method (Part 14)",
       "studyId": "ZcyZ5DVD",
       "puzzles": 50,
       "skipped": 0,

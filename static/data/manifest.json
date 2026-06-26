@@ -3,7 +3,7 @@
   "sets": [
     {
       "id": "the-woodpecker-method-1-25",
-      "title": "The woodpecker Method 1-25",
+      "title": "The Woodpecker Method 1-25",
       "file": "sets/the-woodpecker-method-1-25.json",
       "count": 25,
       "source": "lichess-study",
@@ -170,9 +170,9 @@
       "description": "From Lichess study fxpx4587 (50 puzzles)."
     },
     {
-      "id": "the-woodpecker-method-part-14-my-100th-study",
-      "title": "The Woodpecker Method (Part 14) MY 100TH STUDY!!",
-      "file": "sets/the-woodpecker-method-part-14-my-100th-study.json",
+      "id": "the-woodpecker-method-part-14",
+      "title": "The Woodpecker Method (Part 14)",
+      "file": "sets/the-woodpecker-method-part-14.json",
       "count": 50,
       "source": "lichess-study",
       "description": "From Lichess study ZcyZ5DVD (50 puzzles)."
