@@ -8,9 +8,9 @@ import type { Cycle, TrainingProgram } from '../types';
 import { DAY_MS } from '../time';
 import { dailyTarget } from './dailyTarget';
 
-/** [allottedDays, breakDaysAfter] per cycle. 7+2+4+1+2+1+1 = ~18 days. */
+/** [allottedDays, breakDaysAfter] per cycle. 7+1+4+1+2+1+1 = ~17 days. */
 export const DEFAULT_SCHEDULE: ReadonlyArray<{ allottedDays: number; breakDaysAfter: number }> = [
-	{ allottedDays: 7, breakDaysAfter: 2 },
+	{ allottedDays: 7, breakDaysAfter: 1 },
 	{ allottedDays: 4, breakDaysAfter: 1 },
 	{ allottedDays: 2, breakDaysAfter: 1 },
 	{ allottedDays: 1, breakDaysAfter: 0 }

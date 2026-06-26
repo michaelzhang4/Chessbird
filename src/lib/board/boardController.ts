@@ -28,6 +28,19 @@ export interface LoadCallbacks {
 	onCorrect?: () => void;
 	onWrong?: (numWrongMoves: number) => void;
 	onSolved?: (result: SolveResult) => void;
+	/** Fires once the puzzle concludes and on every review navigation/exploration step. */
+	onReview?: (state: ReviewState) => void;
+}
+
+/** Snapshot of post-puzzle review state, emitted to the UI for nav controls + move list. */
+export interface ReviewState {
+	ply: number; // moves applied from the puzzle's starting position (cursor)
+	total: number; // length of the line currently being viewed
+	solutionLen: number; // length of the original solution line
+	branched: boolean; // user has explored a move off the solution line
+	sideToMove: Color;
+	fen: string; // the position currently being viewed (for engine analysis)
+	san: string[]; // SAN for each move in the current line
 }
 
 export interface PuzzleBoardOptions {
@@ -56,6 +69,15 @@ export class PuzzleBoard {
 	private usedSolution = false;
 	private finished = false;
 	private busy = false;
+
+	// post-puzzle review/exploration state
+	private reviewing = false;
+	private puzzleFen = '';
+	private solutionLine: string[] = []; // the full scripted line (incl. setup move)
+	private reviewLine: string[] = []; // the working line (may branch from the solution)
+	private reviewCursor = 0;
+	private reviewChess = new Chess();
+	private branched = false;
 
 	constructor(el: HTMLElement, opts: PuzzleBoardOptions = {}) {
 		this.now = opts.now ?? (() => Date.now());
@@ -99,6 +121,10 @@ export class PuzzleBoard {
 
 		this.chess = new Chess(puzzle.fen);
 		this.solverColor = puzzle.solverColor;
+		this.reviewing = false;
+		this.branched = false;
+		this.puzzleFen = puzzle.fen;
+		this.solutionLine = [...puzzle.moves];
 
 		this.cg.set({
 			fen: this.chess.fen(),
@@ -156,9 +182,9 @@ export class PuzzleBoard {
 		});
 	}
 
-	private legalDests(): Dests {
+	private legalDests(chess: Chess = this.chess): Dests {
 		const dests: Dests = new Map();
-		for (const m of this.chess.moves({ verbose: true })) {
+		for (const m of chess.moves({ verbose: true })) {
 			const arr = dests.get(m.from as Key) ?? [];
 			arr.push(m.to as Key);
 			dests.set(m.from as Key, arr);
@@ -282,5 +308,128 @@ export class PuzzleBoard {
 			msToFirstMove: Math.max(0, (this.firstMoveAt || end) - this.startedAt),
 			msTotal: Math.max(0, end - this.startedAt)
 		});
+		if (!this.viewOnly) this.enterReview();
+	}
+
+	// ---- post-puzzle review / free exploration ----
+
+	/** After the puzzle concludes, let the user scrub the line and try their own moves. */
+	private enterReview(): void {
+		this.reviewing = true;
+		this.branched = false;
+		this.reviewLine = [...this.solutionLine];
+		this.reviewCursor = this.reviewLine.length; // start on the final position
+		this.renderReview();
+	}
+
+	/** Replay the working line up to the cursor and re-arm the board for free play. */
+	private renderReview(): void {
+		const ch = new Chess(this.puzzleFen);
+		for (let i = 0; i < this.reviewCursor; i++) this.playUci(ch, this.reviewLine[i]);
+		this.reviewChess = ch;
+		const last = this.reviewCursor > 0 ? this.reviewLine[this.reviewCursor - 1] : undefined;
+		this.cg.set({
+			fen: ch.fen(),
+			orientation: colorWord(this.solverColor),
+			turnColor: colorWord(ch.turn() as Color),
+			lastMove: last ? [last.slice(0, 2) as Key, last.slice(2, 4) as Key] : undefined,
+			check: ch.inCheck(),
+			movable: {
+				free: false,
+				color: colorWord(ch.turn() as Color),
+				dests: this.legalDests(ch),
+				showDests: true,
+				events: { after: (orig: Key, dest: Key) => void this.onReviewMove(orig, dest) }
+			}
+		});
+		this.cg.setShapes([]);
+		this.emitReview();
+	}
+
+	/** A move played on the board during review: follow the line, or branch a new variation. */
+	private async onReviewMove(orig: Key, dest: Key): Promise<void> {
+		if (!this.reviewing) return;
+		const ch = this.reviewChess;
+		const piece = ch.get(orig as Square);
+		let promotion: Promotion | undefined;
+		const toLastRank = dest[1] === '8' || dest[1] === '1';
+		if (piece && piece.type === 'p' && toLastRank) {
+			const choice = this.requestPromotion
+				? await this.requestPromotion(ch.turn() as Color, dest)
+				: 'q';
+			if (!choice) {
+				this.renderReview(); // cancelled — snap back
+				return;
+			}
+			promotion = choice;
+		}
+		const uci = `${orig}${dest}${promotion ?? ''}`;
+		if (this.reviewLine[this.reviewCursor] === uci) {
+			this.reviewCursor++; // same as the next move in view — just step forward
+		} else {
+			this.reviewLine = this.reviewLine.slice(0, this.reviewCursor);
+			this.reviewLine.push(uci);
+			this.reviewCursor++;
+			this.branched = true;
+		}
+		this.renderReview();
+	}
+
+	private playUci(ch: Chess, uci: string): void {
+		ch.move({
+			from: uci.slice(0, 2),
+			to: uci.slice(2, 4),
+			promotion: uci.length === 5 ? (uci[4] as Promotion) : undefined
+		});
+	}
+
+	private emitReview(): void {
+		if (!this.cb.onReview) return;
+		const ch = new Chess(this.puzzleFen);
+		const san: string[] = [];
+		for (const uci of this.reviewLine) {
+			const m = ch.move({
+				from: uci.slice(0, 2),
+				to: uci.slice(2, 4),
+				promotion: uci.length === 5 ? (uci[4] as Promotion) : undefined
+			});
+			san.push(m.san);
+		}
+		this.cb.onReview({
+			ply: this.reviewCursor,
+			total: this.reviewLine.length,
+			solutionLen: this.solutionLine.length,
+			branched: this.branched,
+			sideToMove: this.reviewChess.turn() as Color,
+			fen: this.reviewChess.fen(),
+			san
+		});
+	}
+
+	/** Jump to a specific point in the line (0 = starting position, n = after move n). */
+	reviewGoto(ply: number): void {
+		if (!this.reviewing) return;
+		this.reviewCursor = Math.max(0, Math.min(this.reviewLine.length, ply));
+		this.renderReview();
+	}
+	reviewBack(): void {
+		this.reviewGoto(this.reviewCursor - 1);
+	}
+	reviewForward(): void {
+		this.reviewGoto(this.reviewCursor + 1);
+	}
+	reviewStart(): void {
+		this.reviewGoto(0);
+	}
+	reviewEnd(): void {
+		this.reviewGoto(this.reviewLine.length);
+	}
+	/** Discard any explored variation and restore the engine solution line. */
+	reviewReset(): void {
+		if (!this.reviewing) return;
+		this.branched = false;
+		this.reviewLine = [...this.solutionLine];
+		this.reviewCursor = this.reviewLine.length;
+		this.renderReview();
 	}
 }

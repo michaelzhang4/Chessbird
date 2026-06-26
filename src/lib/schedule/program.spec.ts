@@ -36,9 +36,9 @@ describe('computeProgramView', () => {
 		expect(v.remainingPuzzles).toBe(200);
 	});
 	it('locks during the break and unlocks when it elapses', () => {
-		const p = markCycleComplete(prog(0), 1000);
-		expect(computeProgramView(p, 300, 1000 + DAY_MS).phase).toBe('break');
-		expect(computeProgramView(p, 300, 1000 + 2 * DAY_MS + 1).phase).toBe('next-ready');
+		const p = markCycleComplete(prog(0), 1000); // cycle 0 has a 1-day break
+		expect(computeProgramView(p, 300, 1000 + DAY_MS / 2).phase).toBe('break');
+		expect(computeProgramView(p, 300, 1000 + DAY_MS + 1).phase).toBe('next-ready');
 	});
 	it('is complete after the final cycle', () => {
 		let p = prog(0);
@@ -63,9 +63,9 @@ describe('dailyTarget', () => {
 
 describe('transitions', () => {
 	it('gates the next cycle behind the break', () => {
-		const p = markCycleComplete(prog(0), 0);
-		expect(canStartNextCycle(p, DAY_MS)).toBe(false);
-		expect(canStartNextCycle(p, 2 * DAY_MS + 1)).toBe(true);
+		const p = markCycleComplete(prog(0), 0); // 1-day break after cycle 0
+		expect(canStartNextCycle(p, DAY_MS - 1)).toBe(false);
+		expect(canStartNextCycle(p, DAY_MS + 1)).toBe(true);
 	});
 	it('activates the next cycle with a fresh deadline', () => {
 		let p = markCycleComplete(prog(0), 0);

@@ -62,6 +62,9 @@ try {
 		if (await btn.isVisible().catch(() => false)) { await btn.click(); await page.waitForTimeout(400); }
 	};
 
+	// After solving, the board stays in review; advance with the "Next" button.
+	const advance = page.getByRole('button', { name: /Next puzzle|Finish cycle|Done →/ });
+
 	for (let i = 0; i < puzzles.length; i++) {
 		const pz = puzzles[i];
 		await dismissGoalModal();
@@ -70,21 +73,23 @@ try {
 		for (let j = 0; j < pz.moves.length; j += 2) {
 			await move(pz.moves[j], pz.solverColor);
 			await page.waitForTimeout(1200); // our move + auto-reply + re-enable
-			await dismissGoalModal();
 		}
+		// solve registers the counter and surfaces the review panel (with its Next button)
 		const after = await solvedCount();
-		// the final solve completes the cycle and swaps the UI (counter regex then misses) → treat as solved
-		const complete = await page.evaluate(() => /Cycle \d+ complete/i.test(document.body.innerText));
+		const reviewed = await advance.isVisible().catch(() => false);
 		const wrong = await page.evaluate(() => /Not the move/.test(document.body.innerText));
-		if (!wrong && (after === before + 1 || complete)) {
+		if (!wrong && reviewed && after === before + 1) {
 			solved++;
 			log(`puzzle ${i + 1}/${puzzles.length} SOLVED · ${pz.moves.join(' ')} (${pz.themes?.join('+') || ''})`);
 		} else {
 			failures++;
 			await page.screenshot({ path: `${OUT}/fail-${setId}-${i + 1}.png` });
-			log(`puzzle ${i + 1}/${puzzles.length} FAILED · counter ${before}→${after}${wrong ? ' · "Not the move"' : ''} · ${pz.moves.join(' ')}`);
+			log(`puzzle ${i + 1}/${puzzles.length} FAILED · counter ${before}→${after}${wrong ? ' · "Not the move"' : ''}${reviewed ? '' : ' · no review panel'} · ${pz.moves.join(' ')}`);
+			break; // the flow is stuck — stop rather than mis-drive the rest
 		}
-		await page.waitForTimeout(600); // let the next puzzle load
+		await advance.click(); // leave review → next puzzle (or finish)
+		await page.waitForTimeout(700);
+		await dismissGoalModal(); // goal prompt can appear after advancing
 	}
 
 	console.log('\n===== SOLVABILITY =====');

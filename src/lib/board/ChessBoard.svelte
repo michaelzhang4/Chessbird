@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
-	import { PuzzleBoard, type SolveResult } from './boardController';
+	import { PuzzleBoard, type SolveResult, type ReviewState } from './boardController';
 	import { solvingPosition, type Promotion } from '$lib/chess';
 	import type { Color, Puzzle } from '$lib/types';
 	import '@lichess-org/chessground/assets/chessground.base.css';
@@ -13,7 +13,8 @@
 		onsolved = undefined,
 		onfirstmove = undefined,
 		oncorrect = undefined,
-		onwrong = undefined
+		onwrong = undefined,
+		onreview = undefined
 	}: {
 		puzzle?: Puzzle;
 		viewOnly?: boolean;
@@ -21,6 +22,7 @@
 		onfirstmove?: () => void;
 		oncorrect?: () => void;
 		onwrong?: (n: number) => void;
+		onreview?: (s: ReviewState) => void;
 	} = $props();
 
 	let el: HTMLDivElement;
@@ -55,7 +57,8 @@
 				onSolved: onsolved,
 				onFirstMove: onfirstmove,
 				onCorrect: oncorrect,
-				onWrong: onwrong
+				onWrong: onwrong,
+				onReview: onreview
 			});
 		}
 	}
@@ -74,6 +77,24 @@
 
 	export function showSolution() {
 		return board?.showSolution();
+	}
+	export function reviewBack() {
+		board?.reviewBack();
+	}
+	export function reviewForward() {
+		board?.reviewForward();
+	}
+	export function reviewStart() {
+		board?.reviewStart();
+	}
+	export function reviewEnd() {
+		board?.reviewEnd();
+	}
+	export function reviewReset() {
+		board?.reviewReset();
+	}
+	export function reviewGoto(ply: number) {
+		board?.reviewGoto(ply);
 	}
 </script>
 
