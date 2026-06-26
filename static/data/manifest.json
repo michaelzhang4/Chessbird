@@ -68,6 +68,23 @@
       "description": "Lichess puzzles tagged Hyperaccelerated Dragon (500 of 1897 found)."
     },
     {
+      "id": "chesscom-jendire-tactics",
+      "title": "Jendire — game tactics",
+      "file": "sets/chesscom-jendire-tactics.json",
+      "count": 12,
+      "source": "chess.com",
+      "ratingRange": [
+        1388,
+        1475
+      ],
+      "themes": [
+        "missed",
+        "found",
+        "mate"
+      ],
+      "description": "Tactics mined from Jendire's rapid games on chess.com (12 of 12 found across 31 games; 6 were missed in-game). Ratings are approximate — the player's game rating at the time."
+    },
+    {
       "id": "the-woodpecker-method-part-1",
       "title": "The Woodpecker Method (Part 1)",
       "file": "sets/the-woodpecker-method-part-1.json",

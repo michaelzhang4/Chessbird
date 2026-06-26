@@ -14,6 +14,7 @@ folder** and use `scripts\cb.cmd`. You never touch Node paths or the deploy step
 scripts\cb.cmd study   <studyId> <set-id> "Title"            # Lichess study → tactics (1 puzzle per chapter)
 scripts\cb.cmd study   <studyId> <set-id> "Title" b expand   # Lichess study → BLACK repertoire drill (full tree)
 scripts\cb.cmd puzzles "<OpeningTag>" <set-id> "Title" 500   # puzzle DB → tactics for one opening
+scripts\cb.cmd mygames <chesscom-user> [set-id] "Title"     # mine YOUR own chess.com games for tactics
 scripts\cb.cmd woodpecker                                    # re-import everything in scripts\studies.json
 scripts\cb.cmd manifest                                      # rebuild the library index (after deleting a set)
 scripts\cb.cmd preview                                       # run locally at http://localhost:5173 (Ctrl+C to stop)
@@ -51,6 +52,22 @@ scripts\cb.cmd deploy "add najdorf tactics"
   A loose word works too — `"Dragon"` matches every Dragon line.
 - `500` is how many to keep (most-popular first). This command downloads a ~300 MB database
   each time and takes a few minutes — that's normal.
+
+### Mine your own games for tactics (chess.com)
+Turn the positions where *you* had a tactic — found or missed — into a training set.
+```
+scripts\cb.cmd mygames Jendire                       # uses sensible defaults (rapid, rated, last 4 months)
+scripts\cb.cmd deploy "add my game tactics"
+```
+- Needs the **Stockfish engine**. The bundled copy at `stockfish\stockfish-*.exe` is auto-detected;
+  otherwise pass `--stockfish <path>` or set `STOCKFISH_PATH`.
+- Scans your recent **rapid, rated** games and keeps positions with a single decisively-winning
+  move (the puzzle is the engine's forcing line). Missed chances are listed first and tagged
+  `missed`; ones you actually played are tagged `found`.
+- Useful flags: `--months 6`, `--max-games 200`, `--max-puzzles 120`, `--time-class blitz,rapid`,
+  `--depth 18`. Add `--dry-run` to preview without writing a file.
+- This runs the engine on hundreds of positions — expect a few minutes. Ratings shown are
+  approximate (your game rating at the time).
 
 ### Add a bunch of Woodpecker studies at once
 1. Open `scripts\studies.json`, add the study IDs (just the codes) to the list.

@@ -10,6 +10,13 @@ node_modules
 
 # Verify artifacts
 verify-shots/
+dev-server.log
+
+# Provided Stockfish engine (large binary, never committed)
+stockfish/
+
+# Claude Code local files
+.claude/
 
 # OS
 .DS_Store
