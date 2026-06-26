@@ -1,23 +1,174 @@
 {
-	"version": 1,
-	"sets": [
-		{
-			"id": "woodpecker-1-25",
-			"title": "Woodpecker 1-25: Easy Exercises",
-			"file": "sets/woodpecker-1-25.json",
-			"count": 25,
-			"source": "lichess-study",
-			"description": "Imported from the Lichess study \"The Woodpecker Method 1-25: Easy Exercises\"."
-		},
-		{
-			"id": "sample-tactics",
-			"title": "Sample Tactics (demo)",
-			"file": "sets/sample-tactics.json",
-			"count": 5,
-			"ratingRange": [800, 1500],
-			"themes": ["mateIn1", "promotion", "backRank"],
-			"source": "sample",
-			"description": "Five hand-verified mates to try the trainer end-to-end. Build a real ~300 set in New Set."
-		}
-	]
+  "version": 1,
+  "sets": [
+    {
+      "id": "the-woodpecker-method-1-25",
+      "title": "The woodpecker Method 1-25",
+      "file": "sets/the-woodpecker-method-1-25.json",
+      "count": 25,
+      "source": "lichess-study",
+      "description": "From Lichess study fmCGaziQ (25 puzzles)."
+    },
+    {
+      "id": "the-woodpecker-method-26-50",
+      "title": "The Woodpecker Method 26-50",
+      "file": "sets/the-woodpecker-method-26-50.json",
+      "count": 25,
+      "source": "lichess-study",
+      "description": "From Lichess study iXZyyKyK (25 puzzles)."
+    },
+    {
+      "id": "the-woodpecker-method-part-1",
+      "title": "The Woodpecker Method (Part 1)",
+      "file": "sets/the-woodpecker-method-part-1.json",
+      "count": 64,
+      "source": "lichess-study",
+      "description": "From Lichess study 4xLfA0En (64 puzzles)."
+    },
+    {
+      "id": "woodpecker-method-easy-51-100",
+      "title": "Woodpecker Method easy (51-100)",
+      "file": "sets/woodpecker-method-easy-51-100.json",
+      "count": 50,
+      "source": "lichess-study",
+      "description": "From Lichess study 4gzGL3Gt (50 puzzles)."
+    },
+    {
+      "id": "the-woodpecker-method-part-2",
+      "title": "The Woodpecker Method (Part 2)",
+      "file": "sets/the-woodpecker-method-part-2.json",
+      "count": 36,
+      "source": "lichess-study",
+      "description": "From Lichess study KicQp8vU (36 puzzles)."
+    },
+    {
+      "id": "the-woodpecker-method-part-4",
+      "title": "The Woodpecker Method (Part 4)",
+      "file": "sets/the-woodpecker-method-part-4.json",
+      "count": 50,
+      "source": "lichess-study",
+      "description": "From Lichess study z5vB3TII (50 puzzles)."
+    },
+    {
+      "id": "the-woodpecker-method-part-3",
+      "title": "The Woodpecker Method (Part 3)",
+      "file": "sets/the-woodpecker-method-part-3.json",
+      "count": 50,
+      "source": "lichess-study",
+      "description": "From Lichess study fIfq3LZR (50 puzzles)."
+    },
+    {
+      "id": "woodpecker-method-easy-151-200",
+      "title": "Woodpecker Method easy (151-200)",
+      "file": "sets/woodpecker-method-easy-151-200.json",
+      "count": 50,
+      "source": "lichess-study",
+      "description": "From Lichess study 2FXn6ZZK (50 puzzles)."
+    },
+    {
+      "id": "the-woodpecker-method-part-5",
+      "title": "The Woodpecker Method (Part 5)",
+      "file": "sets/the-woodpecker-method-part-5.json",
+      "count": 50,
+      "source": "lichess-study",
+      "description": "From Lichess study k6kRDIK1 (50 puzzles)."
+    },
+    {
+      "id": "woodpecker-method-easy-201-222",
+      "title": "Woodpecker Method easy (201-222)",
+      "file": "sets/woodpecker-method-easy-201-222.json",
+      "count": 22,
+      "source": "lichess-study",
+      "description": "From Lichess study Cw7kju9J (22 puzzles)."
+    },
+    {
+      "id": "the-woodpecker-method-part-6",
+      "title": "The Woodpecker Method (Part 6)",
+      "file": "sets/the-woodpecker-method-part-6.json",
+      "count": 48,
+      "source": "lichess-study",
+      "description": "From Lichess study L1eiMWmn (48 puzzles)."
+    },
+    {
+      "id": "the-woodpecker-method-part-7",
+      "title": "The Woodpecker Method (Part 7)",
+      "file": "sets/the-woodpecker-method-part-7.json",
+      "count": 50,
+      "source": "lichess-study",
+      "description": "From Lichess study PpL7KEKy (50 puzzles)."
+    },
+    {
+      "id": "the-woodpecker-method-part-8",
+      "title": "The Woodpecker Method (Part 8)",
+      "file": "sets/the-woodpecker-method-part-8.json",
+      "count": 50,
+      "source": "lichess-study",
+      "description": "From Lichess study y5VebmDO (50 puzzles)."
+    },
+    {
+      "id": "the-woodpecker-method-part-9",
+      "title": "The Woodpecker Method (Part 9)",
+      "file": "sets/the-woodpecker-method-part-9.json",
+      "count": 50,
+      "source": "lichess-study",
+      "description": "From Lichess study RJQS7j5G (50 puzzles)."
+    },
+    {
+      "id": "the-woodpecker-method-part-10",
+      "title": "The Woodpecker Method (Part 10)",
+      "file": "sets/the-woodpecker-method-part-10.json",
+      "count": 49,
+      "source": "lichess-study",
+      "description": "From Lichess study KPtKmETT (49 puzzles)."
+    },
+    {
+      "id": "the-woodpecker-method-part-11",
+      "title": "The Woodpecker Method (Part 11)",
+      "file": "sets/the-woodpecker-method-part-11.json",
+      "count": 50,
+      "source": "lichess-study",
+      "description": "From Lichess study Cy4v4dlS (50 puzzles)."
+    },
+    {
+      "id": "the-woodpecker-method-part-18",
+      "title": "The Woodpecker Method (Part 18)",
+      "file": "sets/the-woodpecker-method-part-18.json",
+      "count": 50,
+      "source": "lichess-study",
+      "description": "From Lichess study KU6tPNfj (50 puzzles)."
+    },
+    {
+      "id": "woodpecker-method-tactic-part-2",
+      "title": "Woodpecker method tactic part 2",
+      "file": "sets/woodpecker-method-tactic-part-2.json",
+      "count": 64,
+      "source": "lichess-study",
+      "description": "From Lichess study bnXEED1V (64 puzzles)."
+    },
+    {
+      "id": "woodpecker-method-tactic-part-3",
+      "title": "Woodpecker method tactic part 3",
+      "file": "sets/woodpecker-method-tactic-part-3.json",
+      "count": 64,
+      "source": "lichess-study",
+      "description": "From Lichess study 1iCUxzuS (64 puzzles)."
+    },
+    {
+      "id": "sample-tactics",
+      "title": "Sample Tactics (demo)",
+      "file": "sets/sample-tactics.json",
+      "count": 5,
+      "ratingRange": [
+        800,
+        1500
+      ],
+      "themes": [
+        "mateIn1",
+        "promotion",
+        "backRank"
+      ],
+      "source": "sample",
+      "description": "Five hand-verified mates to try the trainer end-to-end."
+    }
+  ]
 }

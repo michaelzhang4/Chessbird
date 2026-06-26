@@ -1,13 +1,13 @@
 {
   "schema": "woodpecker-set@1",
-  "id": "woodpecker-1-25",
-  "title": "Woodpecker 1-25: Easy Exercises",
+  "id": "the-woodpecker-method-1-25",
+  "title": "The woodpecker Method 1-25",
   "description": "Imported from Lichess study https://lichess.org/study/fmCGaziQ",
   "createdAt": "2026-06-26",
   "source": "lichess-study",
   "puzzles": [
     {
-      "id": "woodpecker-1-25_001",
+      "id": "the-woodpecker-method-1-25_001",
       "fen": "r6r/1pp3k1/1b6/p2P1p2/P1N1pn2/2P2PP1/BP5P/4RR1K b - - 0 1",
       "moves": [
         "h8h2",
@@ -20,7 +20,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/1kiIy1C0"
     },
     {
-      "id": "woodpecker-1-25_002",
+      "id": "the-woodpecker-method-1-25_002",
       "fen": "rnb3kr/ppp4p/3b3B/3Pp2n/2BP4/3K1Rp1/PPP3q1/RN1Q4 w - - 0 1",
       "moves": [
         "f3f8",
@@ -35,7 +35,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/3xbXMcxD"
     },
     {
-      "id": "woodpecker-1-25_003",
+      "id": "the-woodpecker-method-1-25_003",
       "fen": "r2q1rk1/pppb1ppp/3b4/4p1P1/4Pn2/2N1B2P/PPPQBP2/2KR3R w - - 0 1",
       "moves": [
         "e3f4",
@@ -48,7 +48,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/6WpdNogJ"
     },
     {
-      "id": "woodpecker-1-25_004",
+      "id": "the-woodpecker-method-1-25_004",
       "fen": "2kr4/1pp4p/1p1r4/5Pp1/1P2q3/2P1R2P/P3KP2/1Q1R4 b - - 0 1",
       "moves": [
         "d6d2"
@@ -59,7 +59,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/qYbzh8BY"
     },
     {
-      "id": "woodpecker-1-25_005",
+      "id": "the-woodpecker-method-1-25_005",
       "fen": "rn1qk2r/ppp2ppp/5n2/2b1p3/2B1P1b1/3P1N2/PPP3PP/RNBQK2R w KQkq - 0 1",
       "moves": [
         "c4f7",
@@ -72,7 +72,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/XbKDrY1P"
     },
     {
-      "id": "woodpecker-1-25_006",
+      "id": "the-woodpecker-method-1-25_006",
       "fen": "r2k3r/pp1b3p/1qn1p1p1/1B1pPn2/Q7/P4N2/1P1BNPPP/2R3K1 w - - 0 1",
       "moves": [
         "c1c6",
@@ -85,7 +85,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/lRgdCxcj"
     },
     {
-      "id": "woodpecker-1-25_007",
+      "id": "the-woodpecker-method-1-25_007",
       "fen": "2r1k2r/1b1p2q1/p4p2/4p3/PpB1Pp1p/7P/1PPRQPP1/4R1K1 b k - 0 1",
       "moves": [
         "f4f3",
@@ -98,7 +98,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/HAPyVbVX"
     },
     {
-      "id": "woodpecker-1-25_008",
+      "id": "the-woodpecker-method-1-25_008",
       "fen": "r3k2r/p1ppbppp/1pn1q3/4P3/2BP2n1/5NB1/1PP1Q1PP/R4K1R b kq - 0 1",
       "moves": [
         "e6c4",
@@ -113,7 +113,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/7B7DJQ4g"
     },
     {
-      "id": "woodpecker-1-25_009",
+      "id": "the-woodpecker-method-1-25_009",
       "fen": "1b6/3n1p2/r1k1p1pp/Pr2P3/1PK2P2/3R4/3B2PP/R7 w - - 0 1",
       "moves": [
         "d3d7",
@@ -126,7 +126,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/FpbSdqKs"
     },
     {
-      "id": "woodpecker-1-25_010",
+      "id": "the-woodpecker-method-1-25_010",
       "fen": "2b5/4Q1pp/pp3n1k/3p3q/P2P1P2/BP1B2P1/7P/6K1 w - - 0 1",
       "moves": [
         "e7f6",
@@ -139,7 +139,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/nBkQEUrJ"
     },
     {
-      "id": "woodpecker-1-25_011",
+      "id": "the-woodpecker-method-1-25_011",
       "fen": "4r2k/1b3Q1p/p1q3p1/1p4B1/2pb4/8/PPB3PP/5R1K w - - 0 1",
       "moves": [
         "c2e4",
@@ -154,7 +154,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/bSRVQD90"
     },
     {
-      "id": "woodpecker-1-25_012",
+      "id": "the-woodpecker-method-1-25_012",
       "fen": "r1n5/pp2q1kp/2ppr1p1/4p1Q1/8/2N4R/PPP3PP/5RK1 w - - 0 1",
       "moves": [
         "g5h6",
@@ -169,7 +169,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/SvMdpWSQ"
     },
     {
-      "id": "woodpecker-1-25_013",
+      "id": "the-woodpecker-method-1-25_013",
       "fen": "4rrk1/ppp3pp/3p2n1/3Ppqb1/nPP5/6P1/P1NBQP1P/2R1NRK1 b - - 0 1",
       "moves": [
         "a4c3",
@@ -182,7 +182,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/ejt79vnP"
     },
     {
-      "id": "woodpecker-1-25_014",
+      "id": "the-woodpecker-method-1-25_014",
       "fen": "2kr3r/p4pp1/2p4p/4p3/2n4q/1NPPnP1P/PP2Q2P/R1K2B1R b - - 0 1",
       "moves": [
         "d8d3",
@@ -201,7 +201,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/rLbDdjdo"
     },
     {
-      "id": "woodpecker-1-25_015",
+      "id": "the-woodpecker-method-1-25_015",
       "fen": "6k1/5pp1/p1n1r2p/2NQ4/1P1p4/P6P/1B1bqPP1/5RK1 b - - 0 1",
       "moves": [
         "e2f1",
@@ -214,7 +214,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/6hNIOjvq"
     },
     {
-      "id": "woodpecker-1-25_016",
+      "id": "the-woodpecker-method-1-25_016",
       "fen": "r1bqk1nr/pppp3p/2n2p2/b5p1/2BPPp1P/2P2N2/P5P1/RNBQK2R w KQkq - 0 1",
       "moves": [
         "f3g5",
@@ -237,7 +237,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/uDZhQykK"
     },
     {
-      "id": "woodpecker-1-25_017",
+      "id": "the-woodpecker-method-1-25_017",
       "fen": "2kr1bnr/p1ppqp1p/bpn5/1N4p1/P2PPp2/5N2/1PP2KPP/R1BQ1B1R w - - 0 1",
       "moves": [
         "b5a7",
@@ -250,7 +250,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/DhESRjAd"
     },
     {
-      "id": "woodpecker-1-25_018",
+      "id": "the-woodpecker-method-1-25_018",
       "fen": "rn1qk1nr/ppp2ppp/8/2b1p3/2B1P1b1/5N2/PPPP2PP/RNBQK2R w KQkq - 0 1",
       "moves": [
         "c4f7",
@@ -263,7 +263,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/8Xn3WbwU"
     },
     {
-      "id": "woodpecker-1-25_019",
+      "id": "the-woodpecker-method-1-25_019",
       "fen": "1k2r3/2p3p1/p4p2/1p3q1p/1n6/PQ2P3/1P2B2P/2KR4 b - - 0 1",
       "moves": [
         "e8e3",
@@ -276,7 +276,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/Ja7G5A6h"
     },
     {
-      "id": "woodpecker-1-25_020",
+      "id": "the-woodpecker-method-1-25_020",
       "fen": "r1bqkbnr/pppp3p/2n2p2/6p1/2BPPp2/5N2/PPP3PP/RNBQK2R w KQkq - 0 1",
       "moves": [
         "f3g5",
@@ -297,7 +297,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/gY611Eu1"
     },
     {
-      "id": "woodpecker-1-25_021",
+      "id": "the-woodpecker-method-1-25_021",
       "fen": "rnbqkbnr/pppp3p/5p2/6p1/4Pp1P/5N2/PPPP2P1/RNBQKB1R w KQkq - 0 1",
       "moves": [
         "f3g5",
@@ -316,7 +316,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/BwItElcB"
     },
     {
-      "id": "woodpecker-1-25_022",
+      "id": "the-woodpecker-method-1-25_022",
       "fen": "rnbqkb1r/pp1p2pp/2p2p2/4p3/2B5/2P2N2/PPP2PPP/R1BQ1RK1 w kq - 0 1",
       "moves": [
         "f3e5",
@@ -337,7 +337,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/34LAUMrL"
     },
     {
-      "id": "woodpecker-1-25_023",
+      "id": "the-woodpecker-method-1-25_023",
       "fen": "2r3k1/p3qppp/2pr4/Q2b4/1P2p3/4P3/P3BPPP/2RR2K1 w - - 0 1",
       "moves": [
         "d1d5",
@@ -350,7 +350,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/KDG2JUDP"
     },
     {
-      "id": "woodpecker-1-25_024",
+      "id": "the-woodpecker-method-1-25_024",
       "fen": "6k1/2p3pp/q3pn2/1pp1p3/4P3/1P1P1P2/rNP2P1P/1Q3RK1 w - - 0 1",
       "moves": [
         "b2a4",
@@ -365,7 +365,7 @@
       "sourceUrl": "https://lichess.org/study/fmCGaziQ/VV3XZzx0"
     },
     {
-      "id": "woodpecker-1-25_025",
+      "id": "the-woodpecker-method-1-25_025",
       "fen": "8/1p3q1k/2p3pp/4P1r1/8/4Q3/PP5P/3R3K b - - 0 1",
       "moves": [
         "g5e5",
