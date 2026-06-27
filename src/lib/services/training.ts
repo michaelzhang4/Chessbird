@@ -43,15 +43,25 @@ export async function loadActive(now = Date.now()): Promise<ActiveState | null> 
 	return { program, set, solvedThisCycle, solvedToday, view };
 }
 
-/** Begin a Woodpecker program for a set (snapshots its puzzles into IndexedDB for offline use). */
-export async function startProgram(set: PuzzleSet, now = Date.now()): Promise<TrainingProgram> {
+/**
+ * Begin a Woodpecker program for a set (snapshots its puzzles into IndexedDB for offline use).
+ * `sampleSize` drills a random subset of that many puzzles (e.g. 300 of a 500-puzzle set);
+ * omit or pass >= the set size to use every puzzle.
+ */
+export async function startProgram(
+	set: PuzzleSet,
+	now = Date.now(),
+	sampleSize?: number
+): Promise<TrainingProgram> {
 	await setsRepo.save(set);
+	// Shuffle once at program start; each cycle reshuffles this same subset, so you train
+	// the pattern, not the sequence. The order is stable within a cycle (see buildQueue).
+	let order = shuffle(set.puzzles.map((p) => p.id));
+	if (sampleSize && sampleSize > 0 && sampleSize < order.length) order = order.slice(0, sampleSize);
 	const program = createProgram({
 		setId: set.id,
 		setTitle: set.title,
-		// Shuffle once at program start; each cycle gets its own order so you train the
-		// pattern, not the sequence. The order is stable within a cycle (see buildQueue).
-		puzzleOrder: shuffle(set.puzzles.map((p) => p.id)),
+		puzzleOrder: order,
 		now
 	});
 	await programsRepo.save(program);

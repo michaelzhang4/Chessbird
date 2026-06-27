@@ -15,14 +15,18 @@
 	let loading = $state(true);
 	let starting = $state(false);
 	let previewIndex = $state(0);
+	let drillCount = $state(0); // how many puzzles to drill (defaults to the whole set)
 
 	onMount(async () => {
 		try {
 			set = await loadSetById(id);
+			if (set) drillCount = set.count;
 		} finally {
 			loading = false;
 		}
 	});
+
+	const clampedCount = $derived(set ? Math.max(1, Math.min(set.count, drillCount || set.count)) : 0);
 
 	const topThemes = $derived(
 		set?.themeCounts
@@ -35,7 +39,7 @@
 	async function begin(assess: boolean) {
 		if (!set) return;
 		if (assess) {
-			goto(`${base}/assess/${id}`);
+			goto(`${base}/assess/${id}?n=${clampedCount}`);
 			return;
 		}
 		const existing = await programsRepo.getActiveId();
@@ -44,7 +48,7 @@
 		}
 		starting = true;
 		try {
-			await startProgram(set);
+			await startProgram(set, undefined, clampedCount);
 			toast.success('Program started — Cycle 1 begins now');
 			goto(`${base}/program`);
 		} finally {
@@ -100,7 +104,36 @@
 		<ChessBoard puzzle={set.puzzles[previewIndex]} viewOnly />
 	</div>
 
-	<div class="mt-5 space-y-2">
+	{#if set.count > 1}
+		<div class="mt-4 rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm">
+			<div class="flex items-baseline justify-between">
+				<label for="drillN" class="text-sm font-semibold text-ink">Drill how many?</label>
+				<span class="text-xs text-neutral-500"><span class="font-bold text-ink">{clampedCount}</span> of {set.count}</span>
+			</div>
+			<div class="mt-2 flex items-center gap-3">
+				<input
+					id="drillN" type="range" min="1" max={set.count} bind:value={drillCount}
+					class="flex-1 accent-brand-600"
+				/>
+				<input
+					type="number" min="1" max={set.count} bind:value={drillCount}
+					class="w-20 rounded-lg border border-neutral-300 px-2 py-1 text-right text-sm"
+				/>
+			</div>
+			{#if set.count > 50}
+				{@const total = set.count}
+				<div class="mt-2 flex flex-wrap gap-1.5">
+					{#each [50, 100, 200, 300, 500].filter((v) => v < total) as v (v)}
+						<button onclick={() => (drillCount = v)} class="rounded-lg border border-neutral-300 px-2.5 py-1 text-xs font-semibold text-neutral-600 active:bg-neutral-100">{v}</button>
+					{/each}
+					<button onclick={() => (drillCount = total)} class="rounded-lg border border-neutral-300 px-2.5 py-1 text-xs font-semibold text-neutral-600 active:bg-neutral-100">All</button>
+				</div>
+			{/if}
+			<p class="mt-2 text-[11px] text-neutral-400">A random {clampedCount} of {set.count} — re-shuffled each cycle.</p>
+		</div>
+	{/if}
+
+	<div class="mt-4 space-y-2">
 		<button
 			onclick={() => begin(true)}
 			class="w-full rounded-2xl bg-brand-600 py-3.5 text-base font-bold text-white shadow-sm active:bg-brand-700"

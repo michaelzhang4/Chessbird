@@ -20,6 +20,7 @@
 	import type { AssessmentItem, AssessmentRun, Puzzle, PuzzleSet, Verdict } from '$lib/types';
 
 	const id = page.params.id ?? '';
+	const sampleSize = Number(page.url.searchParams.get('n')) || undefined; // drill-subset size from the set page
 	let set = $state<PuzzleSet | null>(null);
 	let phase = $state<'intro' | 'running' | 'done'>('intro');
 	let sampled = $state<Puzzle[]>([]);
@@ -109,7 +110,7 @@
 		}
 		starting = true;
 		try {
-			await startProgram(set);
+			await startProgram(set, undefined, sampleSize);
 			toast.success('Program started — Cycle 1 begins now');
 			goto(`${base}/program`);
 		} finally {

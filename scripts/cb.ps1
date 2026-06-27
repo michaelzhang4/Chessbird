@@ -44,6 +44,7 @@ switch ($cmd) {
 	'study'      { node scripts/import-study.mjs @rest }
 	'puzzles'    { node scripts/import-opening-puzzles.mjs @rest }
 	'mygames'    { node scripts/import-mygames.mjs @rest }
+	'combine'    { node scripts/combine-sets.mjs @rest }
 	'woodpecker' { node scripts/import-studies.mjs }
 	'manifest'   { node scripts/rebuild-manifest.mjs }
 	'preview'    { $env:BASE_PATH = ''; npm run dev }
@@ -56,6 +57,7 @@ Chessbird helper. Usage:  scripts\cb.cmd <command> [args]
   study   <studyId> <set-id> "Title" b expand   Import as a Black REPERTOIRE drill (full variation tree)
   puzzles "<OpeningTag>" <set-id> "Title" 500   Build a tactics set from the puzzle DB by opening tag
   mygames <chesscom-user> [set-id] "Title"      Mine YOUR own chess.com games for tactics (needs Stockfish)
+  combine <out-id> "Title" <src-id...>           Merge sets into one (dedup by position); --remove-sources to delete originals
   woodpecker                                     Re-import every study listed in scripts\studies.json
   manifest                                       Rebuild the library index after adding/deleting set files
   preview                                        Run the app locally at http://localhost:5173
