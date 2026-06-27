@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+		/>
+		<meta name="theme-color" content="#779556" />
+		<meta name="description" content="Woodpecker Method chess training — curate puzzle sets and drill them across four ever-faster cycles." />
+		<!-- iOS standalone / home-screen install -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-title" content="Woodpecker" />
+		<link rel="manifest" href="/Chessbird/manifest.webmanifest" />
+		<link rel="apple-touch-icon" href="/Chessbird/icons/apple-touch-icon-180.png" />
+		<title>Woodpecker Chess</title>
+		<link href="/Chessbird/_app/immutable/entry/start.BAC9MXnG.js" rel="modulepreload">
+		<link href="/Chessbird/_app/immutable/chunks/BZQYkj_a.js" rel="modulepreload">
+		<link href="/Chessbird/_app/immutable/chunks/CnEOK8Bu.js" rel="modulepreload">
+		<link href="/Chessbird/_app/immutable/entry/app.B4jIYF4C.js" rel="modulepreload">
+		<link href="/Chessbird/_app/immutable/chunks/DYl5dUZ5.js" rel="modulepreload">
+		<link href="/Chessbird/_app/immutable/chunks/xihTtKlq.js" rel="modulepreload">
+		<link href="/Chessbird/_app/immutable/nodes/0.C08xqSha.js" rel="modulepreload">
+		<link href="/Chessbird/_app/immutable/chunks/BWtDeLGA.js" rel="modulepreload">
+		<link href="/Chessbird/_app/immutable/chunks/CODTHdmV.js" rel="modulepreload">
+		
+		<link href="/Chessbird/_app/immutable/assets/0.BZKtGeyV.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+			<script>
+				{
+					__sveltekit_8hlf76 = {
+						base: "/Chessbird",
+						assets: "/Chessbird"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/Chessbird/_app/immutable/entry/start.BAC9MXnG.js"),
+						import("/Chessbird/_app/immutable/entry/app.B4jIYF4C.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+
+					if ('serviceWorker' in navigator) {
+						const script_url = '/Chessbird/service-worker.js';
+						const policy = globalThis?.window?.trustedTypes?.createPolicy(
+							'sveltekit-trusted-url',
+							{ createScriptURL(url) { return url; } }
+						);
+						const sanitised = policy?.createScriptURL(script_url) ?? script_url;
+						addEventListener('load', function () {
+							navigator.serviceWorker.register(sanitised);
+						});
+					}
+				}
+			</script>
+		</div>
+	</body>
+</html>

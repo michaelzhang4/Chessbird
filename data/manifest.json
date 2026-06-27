@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "sets": [
+    {
+      "id": "dragon-complex-tactics",
+      "title": "Dragon Complex - Tactics",
+      "file": "sets/dragon-complex-tactics.json",
+      "count": 800,
+      "source": "lichess",
+      "ratingRange": [
+        400,
+        2560
+      ],
+      "themes": [
+        "middlegame",
+        "mate",
+        "mateIn1"
+      ],
+      "description": "Lichess puzzles tagged Dragon|Yugoslav (800 of 12426 found)."
+    },
+    {
+      "id": "dragon-yugoslav-attack",
+      "title": "Dragon/Yugoslav Attack (Black)",
+      "file": "sets/dragon-yugoslav-attack.json",
+      "count": 62,
+      "source": "lichess-repertoire",
+      "description": "Dragon Yugoslav — drilling Black. From Lichess study https://lichess.org/study/UEAlHDey"
+    },
+    {
+      "id": "dragon-yugoslav-accelerated",
+      "title": "Dragon/Yugoslav: Accelerated (Black)",
+      "file": "sets/dragon-yugoslav-accelerated.json",
+      "count": 241,
+      "source": "lichess-repertoire",
+      "description": "Yugoslav Accelerated Dragon — drilling Black. From Lichess study https://lichess.org/study/0SYyUJIx"
+    },
+    {
+      "id": "had-repertoire-1",
+      "title": "H-Dragon Repertoire (Black)",
+      "file": "sets/had-repertoire-1.json",
+      "count": 130,
+      "source": "lichess-repertoire",
+      "description": "Hyper-Accelerated Dragon Repertoire — drilling Black. From Lichess study https://lichess.org/study/VV8eF6Ge"
+    },
+    {
+      "id": "had-repertoire-2",
+      "title": "H-Dragon: Anti-systems and Maroczy (Black)",
+      "file": "sets/had-repertoire-2.json",
+      "count": 140,
+      "source": "lichess-repertoire",
+      "description": "Hyperaccelerated Dragon — drilling Black. From Lichess study https://lichess.org/study/sD7T4Seb"
+    },
+    {
+      "id": "hyperaccelerated-dragon-tactics",
+      "title": "Hyperaccelerated Dragon - Tactics",
+      "file": "sets/hyperaccelerated-dragon-tactics.json",
+      "count": 500,
+      "source": "lichess",
+      "ratingRange": [
+        411,
+        2310
+      ],
+      "themes": [
+        "middlegame",
+        "short",
+        "mate"
+      ],
+      "description": "Lichess puzzles tagged Hyperaccelerated Dragon (500 of 1897 found)."
+    },
+    {
+      "id": "chesscom-jendire-tactics",
+      "title": "Jendire — game tactics",
+      "file": "sets/chesscom-jendire-tactics.json",
+      "count": 12,
+      "source": "chess.com",
+      "ratingRange": [
+        1388,
+        1475
+      ],
+      "themes": [
+        "missed",
+        "found",
+        "mate"
+      ],
+      "description": "Tactics mined from Jendire's rapid games on chess.com (12 of 12 found across 31 games; 6 were missed in-game). Ratings are approximate — the player's game rating at the time."
+    },
+    {
+      "id": "the-woodpecker-method",
+      "title": "The Woodpecker Method",
+      "file": "sets/the-woodpecker-method.json",
+      "count": 1138,
+      "source": "lichess-study",
+      "description": "1138 unique puzzles, combined from 30 study transcriptions (deduplicated by position)."
+    },
+    {
+      "id": "the-woodpecker-method-2",
+      "title": "The Woodpecker Method 2",
+      "file": "sets/the-woodpecker-method-2.json",
+      "count": 146,
+      "source": "lichess-study",
+      "description": "146 unique puzzles, combined from 3 study transcriptions (deduplicated by position)."
+    },
+    {
+      "id": "sample-tactics",
+      "title": "Sample Tactics (demo)",
+      "file": "sets/sample-tactics.json",
+      "count": 5,
+      "source": "sample",
+      "ratingRange": [
+        800,
+        1500
+      ],
+      "themes": [
+        "mateIn1",
+        "opening",
+        "promotion"
+      ],
+      "description": "A few hand-verified mates to try the trainer. Paste a Lichess CSV in \"New Set\" to build a real ~300-puzzle set."
+    }
+  ]
+}

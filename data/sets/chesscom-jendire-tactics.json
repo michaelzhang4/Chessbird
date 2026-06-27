@@ -1,0 +1,235 @@
+{
+  "schema": "woodpecker-set@1",
+  "id": "chesscom-jendire-tactics",
+  "title": "Jendire — game tactics",
+  "description": "Tactics mined from Jendire's rapid games on chess.com (12 of 12 found across 31 games; 6 were missed in-game). Ratings are approximate — the player's game rating at the time.",
+  "createdAt": "2026-06-26",
+  "source": "chess.com",
+  "puzzles": [
+    {
+      "id": "chesscom-jendire-tactics_0002",
+      "fen": "8/8/3p2pp/5qk1/7r/8/4QPK1/2R3R1 b - - 9 41",
+      "moves": [
+        "f5h3"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "rating": 1475,
+      "themes": [
+        "missed",
+        "mate"
+      ],
+      "sourceUrl": "https://www.chess.com/game/live/170559450332",
+      "source": "chess.com"
+    },
+    {
+      "id": "chesscom-jendire-tactics_0011",
+      "fen": "8/8/R6p/Pk6/8/8/3N2K1/r7 w - - 3 55",
+      "moves": [
+        "a6b6",
+        "b5a5",
+        "d2c4",
+        "a5a4",
+        "b6a6"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "rating": 1407,
+      "themes": [
+        "missed"
+      ],
+      "sourceUrl": "https://www.chess.com/game/live/169914664118",
+      "source": "chess.com"
+    },
+    {
+      "id": "chesscom-jendire-tactics_0003",
+      "fen": "1k1r3r/pp4p1/1b2q2p/1N3p2/PP6/3P2PP/1Q2bpBK/2R2R2 w - - 0 26",
+      "moves": [
+        "b2g7",
+        "e6d7",
+        "g7e5",
+        "b8a8",
+        "b5c7"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "rating": 1465,
+      "themes": [
+        "missed"
+      ],
+      "sourceUrl": "https://www.chess.com/game/live/170407837860",
+      "source": "chess.com"
+    },
+    {
+      "id": "chesscom-jendire-tactics_0004",
+      "fen": "r1bq1rk1/p4pb1/4pnpp/3p4/2B4B/2N2Q2/PPP2PPP/R3R1K1 b - - 1 13",
+      "moves": [
+        "g6g5",
+        "h4g3",
+        "g5g4",
+        "f3e2",
+        "d5c4"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "rating": 1453,
+      "themes": [
+        "missed"
+      ],
+      "sourceUrl": "https://www.chess.com/game/live/170407255516",
+      "source": "chess.com"
+    },
+    {
+      "id": "chesscom-jendire-tactics_0010",
+      "fen": "8/1N6/R6p/P4k2/8/4K1p1/7r/8 w - - 0 48",
+      "moves": [
+        "e3f3",
+        "g3g2",
+        "f3f2",
+        "g2g1q",
+        "f2g1"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "rating": 1407,
+      "themes": [
+        "missed"
+      ],
+      "sourceUrl": "https://www.chess.com/game/live/169914664118",
+      "source": "chess.com"
+    },
+    {
+      "id": "chesscom-jendire-tactics_0005",
+      "fen": "2R5/5rpk/2b5/2p2p1p/1p2r2P/P1B1P1P1/5P1K/2R5 w - - 0 40",
+      "moves": [
+        "c8c6",
+        "b4c3",
+        "c1c3",
+        "e4a4",
+        "c6c5"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "rating": 1441,
+      "themes": [
+        "missed"
+      ],
+      "sourceUrl": "https://www.chess.com/game/live/170406707310",
+      "source": "chess.com"
+    },
+    {
+      "id": "chesscom-jendire-tactics_0008",
+      "fen": "8/8/4k1p1/3Rp2p/4p2P/3PK1P1/3r1P2/8 w - - 0 42",
+      "moves": [
+        "d5e5",
+        "e6f6",
+        "e3d2",
+        "f6e5",
+        "d2e3"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "rating": 1450,
+      "themes": [
+        "found"
+      ],
+      "sourceUrl": "https://www.chess.com/game/live/170004508844",
+      "source": "chess.com"
+    },
+    {
+      "id": "chesscom-jendire-tactics_0012",
+      "fen": "8/8/7R/k7/8/8/3N2K1/r7 w - - 0 56",
+      "moves": [
+        "d2b3",
+        "a5b4",
+        "b3a1",
+        "b4c3",
+        "a1b3"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "rating": 1407,
+      "themes": [
+        "found"
+      ],
+      "sourceUrl": "https://www.chess.com/game/live/169914664118",
+      "source": "chess.com"
+    },
+    {
+      "id": "chesscom-jendire-tactics_0007",
+      "fen": "r5k1/p5b1/1p1q3r/3p2Q1/2P3P1/5pK1/PP3P2/1RB2R2 w - - 5 27",
+      "moves": [
+        "c1f4",
+        "d6c6",
+        "g5d5",
+        "h6e6",
+        "d5c6"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "rating": 1390,
+      "themes": [
+        "found"
+      ],
+      "sourceUrl": "https://www.chess.com/game/live/170324682086",
+      "source": "chess.com"
+    },
+    {
+      "id": "chesscom-jendire-tactics_0009",
+      "fen": "r4rk1/1ppq1ppp/p1np1n2/1P2p3/2P5/2NP1NP1/P2QPPbP/R4RK1 w - - 0 14",
+      "moves": [
+        "b5c6",
+        "d7h3",
+        "f3g5",
+        "g2f1",
+        "g5h3"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "rating": 1407,
+      "themes": [
+        "found"
+      ],
+      "sourceUrl": "https://www.chess.com/game/live/169914664118",
+      "source": "chess.com"
+    },
+    {
+      "id": "chesscom-jendire-tactics_0006",
+      "fen": "r2q1rk1/p2n1ppp/3Bbb2/3ppn2/8/2NP1NP1/P2QPPBP/R1R3K1 w - - 5 17",
+      "moves": [
+        "d6f8",
+        "d7f8",
+        "a1b1",
+        "h7h6",
+        "d2d1"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "w",
+      "rating": 1388,
+      "themes": [
+        "found"
+      ],
+      "sourceUrl": "https://www.chess.com/game/live/170328315556",
+      "source": "chess.com"
+    },
+    {
+      "id": "chesscom-jendire-tactics_0001",
+      "fen": "r6r/4p1k1/3p1Bpp/5b2/8/pq5P/1P1Q1PP1/2R1R1K1 b - - 0 28",
+      "moves": [
+        "g7f6",
+        "b2a3",
+        "b3d3",
+        "d2b4",
+        "a8b8"
+      ],
+      "setupMoveFirst": false,
+      "solverColor": "b",
+      "rating": 1475,
+      "themes": [
+        "found"
+      ],
+      "sourceUrl": "https://www.chess.com/game/live/170559450332",
+      "source": "chess.com"
+    }
+  ]
+}
