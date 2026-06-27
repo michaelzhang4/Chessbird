@@ -99,6 +99,7 @@
 		}
 		active = a;
 		pmap = puzzleMap(a.set);
+		// Order is the cycle's own shuffle (set once when the cycle starts); stable on reopen.
 		queue = await buildQueue(a.program);
 		solvedThisCycle = a.solvedThisCycle;
 		solvedToday = a.solvedToday;
@@ -217,6 +218,7 @@
 {#if loading}
 	<div class="mt-4 aspect-square animate-pulse rounded-2xl bg-neutral-200"></div>
 {:else if current}
+	<span class="hidden" data-puzzle-id={current.id} aria-hidden="true"></span>
 	<ChessBoard
 		bind:this={boardComp}
 		puzzle={current}

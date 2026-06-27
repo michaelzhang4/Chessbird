@@ -12,6 +12,16 @@ import {
 import type { SolveResult } from '$lib/board/boardController';
 import { dayKey } from '$lib/time';
 
+/** Fisher–Yates shuffle (returns a new array). */
+function shuffle<T>(a: T[]): T[] {
+	const r = [...a];
+	for (let i = r.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[r[i], r[j]] = [r[j], r[i]];
+	}
+	return r;
+}
+
 export interface ActiveState {
 	program: TrainingProgram;
 	set: PuzzleSet;
@@ -39,7 +49,9 @@ export async function startProgram(set: PuzzleSet, now = Date.now()): Promise<Tr
 	const program = createProgram({
 		setId: set.id,
 		setTitle: set.title,
-		puzzleOrder: set.puzzles.map((p) => p.id),
+		// Shuffle once at program start; each cycle gets its own order so you train the
+		// pattern, not the sequence. The order is stable within a cycle (see buildQueue).
+		puzzleOrder: shuffle(set.puzzles.map((p) => p.id)),
 		now
 	});
 	await programsRepo.save(program);
@@ -47,7 +59,7 @@ export async function startProgram(set: PuzzleSet, now = Date.now()): Promise<Tr
 	return program;
 }
 
-/** The remaining puzzles to solve in the current cycle, in fixed order. */
+/** The remaining puzzles to solve in the current cycle, in the cycle's (shuffled) order. */
 export async function buildQueue(program: TrainingProgram): Promise<string[]> {
 	const solved = await attemptsRepo.solvedIdsForCycle(program.id, program.currentCycleIndex);
 	return program.puzzleOrder.filter((id) => !solved.has(id));
@@ -98,7 +110,9 @@ export async function advanceToNextCycle(
 	program: TrainingProgram,
 	now = Date.now()
 ): Promise<TrainingProgram> {
-	const updated = startNextCycle(program, now);
+	// Re-shuffle for the new cycle so each repeat presents a different order.
+	const started = startNextCycle(program, now);
+	const updated = { ...started, puzzleOrder: shuffle(started.puzzleOrder) };
 	await programsRepo.save(updated);
 	return updated;
 }

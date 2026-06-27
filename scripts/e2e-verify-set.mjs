@@ -64,10 +64,14 @@ try {
 
 	// After solving, the board stays in review; advance with the "Next" button.
 	const advance = page.getByRole('button', { name: /Next puzzle|Finish cycle|Done →/ });
+	// The solve queue is shuffled per session, so identify each puzzle by its DOM marker.
+	const byId = new Map(set.puzzles.map((p) => [p.id, p]));
+	const currentId = () => page.getAttribute('[data-puzzle-id]', 'data-puzzle-id');
 
 	for (let i = 0; i < puzzles.length; i++) {
-		const pz = puzzles[i];
 		await dismissGoalModal();
+		const pz = byId.get(await currentId());
+		if (!pz) { failures++; log(`puzzle ${i + 1}: could not identify current puzzle`); break; }
 		const before = await solvedCount();
 		// solver plays the even-indexed plies; opponent replies (odd) auto-play
 		for (let j = 0; j < pz.moves.length; j += 2) {
@@ -80,11 +84,11 @@ try {
 		const wrong = await page.evaluate(() => /Not the move/.test(document.body.innerText));
 		if (!wrong && reviewed && after === before + 1) {
 			solved++;
-			log(`puzzle ${i + 1}/${puzzles.length} SOLVED · ${pz.moves.join(' ')} (${pz.themes?.join('+') || ''})`);
+			log(`puzzle ${i + 1}/${puzzles.length} SOLVED · ${pz.id} · ${pz.moves.join(' ')} (${pz.themes?.join('+') || ''})`);
 		} else {
 			failures++;
 			await page.screenshot({ path: `${OUT}/fail-${setId}-${i + 1}.png` });
-			log(`puzzle ${i + 1}/${puzzles.length} FAILED · counter ${before}→${after}${wrong ? ' · "Not the move"' : ''}${reviewed ? '' : ' · no review panel'} · ${pz.moves.join(' ')}`);
+			log(`puzzle ${i + 1}/${puzzles.length} FAILED · ${pz.id} · counter ${before}→${after}${wrong ? ' · "Not the move"' : ''}${reviewed ? '' : ' · no review panel'} · ${pz.moves.join(' ')}`);
 			break; // the flow is stuck — stop rather than mis-drive the rest
 		}
 		await advance.click(); // leave review → next puzzle (or finish)
